@@ -6,9 +6,7 @@ This is a simple react webapp consuming the travel REST API.
 
 The UI is hosted on the below `Firebase` URL
 
-[Demo] (https://us-central1-intelligentb.cloudfunctions.net)
-
-[TestRoutes] (https://us-central1-intelligentb.cloudfunctions.net/routes?departure_city=Amsterdam&arrival_city=Paris&order_by=Duration)
+[Demo] (https://intelligentb.firebaseapp.com)
 
 ### `Description`
 
