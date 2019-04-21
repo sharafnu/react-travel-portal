@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Travel Deals - Portal
 
-## Available Scripts
+This is a simple react webapp consuming the travel REST API. 
 
-In the project directory, you can run:
+### `Demo`
 
-### `npm start`
+The UI is hosted on the below `Firebase` URL
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Demo] (https://us-central1-intelligentb.cloudfunctions.net)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+[TestRoutes] (https://us-central1-intelligentb.cloudfunctions.net/routes?departure_city=Amsterdam&arrival_city=Paris&order_by=Duration)
 
-### `npm test`
+### `Description`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Users can search best routes for given departure, arrival cities and sort type. User can search by shortest duration or cheapest cost
 
-### `npm run build`
+### `Code Structure`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Important files : 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+* App.js
+    > Entry point of the app
+* App.css
+    > Holds the customizations on top of Bootstrap 4 and includes a custom font
+* components/TripSearch/TripSearchPage.js
+    > This is a container component that assembles the UI for the trip search feature. It embeds various other View components
+* components/TripSearch/TripList.js
+    > Renders the trip routes details listing section
+* components/TripSearch/TripSummary.js
+    > Renders the trip summary section 
+* components/TripSearch/TransportInfo.js
+    > Renders the transportation mode
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Plugins Used`
 
-### `npm run eject`
+This project uses `reactstrap` for bootstrap 4 support. UI elements are utilizing `Bootstrap 4` styles with minimum setup of customizations
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Also uses `react-icons` for SVG icons
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `Installation`
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Install the dependencies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+npm install
+```
+or
+```
+yarn
+```
 
-## Learn More
+### `Run the project locally`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+npm start
+```
+or
+```
+yarn start
+```

@@ -1,33 +1,32 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700");
+
+body {
+  font-family: "Nunito", "Roboto", sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.trip-search-container {
+  width: 100%;
+  height: 100vh;
+  background: "#eee";
+}
+.header-title {
+  margin-top: -10vh;
+  text-align: center;  
+}
+.custom-button {
+  background-image: linear-gradient(to right, #f51414 0%, #f03252 51%, #e9630a 100%);
+  border: none !important;
+  box-shadow: none !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.travel-bg {  
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  width: 100%;
+  background: url('bg.jpeg');
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.arrow-pill {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
 }
