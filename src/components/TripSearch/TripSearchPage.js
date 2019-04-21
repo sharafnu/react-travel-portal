@@ -35,16 +35,16 @@ export default class TripSearchPage extends React.Component {
     }
 
     handleDepartureCityChange(event) {
-        this.setState({ departureCity: event.target.value });
+        this.setState({ departureCity: event.target.value, routeData: [] });
     }
 
 
     handleArrivalCityChange(event) {
-        this.setState({ arrivalCity: event.target.value });
+        this.setState({ arrivalCity: event.target.value, routeData: [] });
     }
 
     sortBy(sortBy) {
-        this.setState({ sortBy });
+        this.setState({ sortBy, routeData: [] });
     }
 
     fetchCities() {
@@ -102,10 +102,10 @@ export default class TripSearchPage extends React.Component {
         );
     }
 
-    resetForm() {
-        this.setState = ({
+    
+    resetForm() {        
+        this.setState({
             isValidInput: false,
-            cities: [],
             sortBy: "Duration",
             departureCity: '',
             arrivalCity: '',
@@ -167,7 +167,7 @@ export default class TripSearchPage extends React.Component {
                                     <Button type="submit" size="lg" className="custom-button mr-4"
                                         disabled={!(this.state.departureCity && this.state.arrivalCity && this.state.departureCity !== this.state.arrivalCity)}>Search</Button>
                                     <Button type="reset" outline size="lg"
-                                        onClick={() => this.resetForm}>Reset</Button>
+                                        onClick={() => this.resetForm() }>Reset</Button>
                                 </Col>
 
                             </Row>
